@@ -1,7 +1,6 @@
 <?php include_once ("../../includes/topo.php"); ?>
 <?php include_once ("../../includes/header_interno.php"); ?>
 
-
 <div class="row">
 	<div class="col-sm-12">                    
     	<div class="page-title-box">

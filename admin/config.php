@@ -3,8 +3,8 @@
 //LOCALHOST//
 if($_SERVER['HTTP_HOST']=='localhost' || $_SERVER['HTTP_HOST']=='127.0.0.1'){
 	
-	$caminho_admin = 'http://'.$_SERVER['HTTP_HOST'].'/bravus/admin/';	
-	$caminho_site = 'http://'.$_SERVER['HTTP_HOST'].'/bravus/';	
+	$caminho_admin = 'http://'.$_SERVER['HTTP_HOST'].'/loja/admin/';	
+	$caminho_site = 'http://'.$_SERVER['HTTP_HOST'].'/loja/';	
 	
 //WEB//	
 } else {
