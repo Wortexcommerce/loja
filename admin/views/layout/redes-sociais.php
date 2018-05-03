@@ -27,6 +27,7 @@
             </div>
             <h3 class="page-title">REDES SOCIAIS</h3>
 
+            ediçao emilio 
         </div>
 	</div>
 </div>
