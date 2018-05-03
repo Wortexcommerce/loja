@@ -1,0 +1,125 @@
+CREATE TABLE `produtos` (
+	`id_produto` int NOT NULL AUTO_INCREMENT,
+	`nome_produto` varchar(99) NOT NULL,
+	`nome_produto` varchar(99) NOT NULL,
+	`resumo_produto` varchar(99) NOT NULL,
+	`video_produto` varchar(99) NOT NULL,
+	`preco_normal_produto` double(10,2) NOT NULL,
+	`preco_promocional_produto` double(10,2) NOT NULL,
+	`n_parcelas_produto` int(11) NOT NULL,
+	`custo_produto` double(10,2) NOT NULL,
+	`descricao_produto` TEXT NOT NULL,
+	`gerenciar_produto` bool NOT NULL,
+	`quantidade_fixa_produto` bool NOT NULL,
+	`quantidade_produto` int(11) NOT NULL,
+	`ean_produto` varchar(15) NOT NULL,
+	`ncm_produto` varchar(12) NOT NULL,
+	`entregavel_produto` bool NOT NULL,
+	`prazo_entrega_produto` int(11) NOT NULL,
+	`peso_produto` double(10,2) NOT NULL,
+	`comprimento_produto` double(10,2) NOT NULL,
+	`largura_produto` double(10,2) NOT NULL,
+	`altura_produto` double(10,2) NOT NULL,
+	`url_pagina_produto` varchar(150) NOT NULL,
+	`titulo_pagina_produto` varchar(150) NOT NULL,
+	`descricao_pagina_produto` varchar(400) NOT NULL,
+	`palavras_chave_produto` varchar(500) NOT NULL,
+	PRIMARY KEY (`id_produto`)
+);
+
+CREATE TABLE `relacionados` (
+	`id_relacionados` int NOT NULL AUTO_INCREMENT,
+	`id_produto` int NOT NULL,
+	PRIMARY KEY (`id_relacionados`)
+);
+
+CREATE TABLE `imagens_produto` (
+	`id_imagem` int NOT NULL AUTO_INCREMENT,
+	`id_usuario` int NOT NULL,
+	`id_produto` int NOT NULL,
+	`nome_imagem` varchar(150) NOT NULL,
+	`temporario_imagem` bool NOT NULL,
+	PRIMARY KEY (`id_imagem`)
+);
+
+CREATE TABLE `categoria` (
+	`id_categoria` int NOT NULL AUTO_INCREMENT,
+	`nome_categoria` varchar(99) NOT NULL,
+	`status_categoria` bool NOT NULL,
+	`descricao_categoria` TEXT NOT NULL,
+	`pai_categoria` int(1) NOT NULL,
+	PRIMARY KEY (`id_categoria`)
+);
+
+CREATE TABLE `relacao_produto_categoria` (
+	`id_relacao_cat` int NOT NULL AUTO_INCREMENT,
+	`id_categoria` int NOT NULL,
+	`id_produto` int NOT NULL,
+	PRIMARY KEY (`id_relacao_cat`)
+);
+
+CREATE TABLE `variacoes` (
+	`id_variacoes` int(11) NOT NULL AUTO_INCREMENT,
+	`nome_variacoes` varchar(99) NOT NULL,
+	`id_produto` int(99) NOT NULL DEFAULT '11',
+	PRIMARY KEY (`id_variacoes`)
+);
+
+CREATE TABLE `item_variacao` (
+	`id_item_variacao` int(11) NOT NULL AUTO_INCREMENT,
+	`id_variacoes` int(11) NOT NULL,
+	`nome_item_variacao` varchar(99) NOT NULL,
+	PRIMARY KEY (`id_item_variacao`)
+);
+
+CREATE TABLE `depoimentos` (
+	`id_depoimento` int(11) NOT NULL AUTO_INCREMENT,
+	`id_cliente` int(11) NOT NULL,
+	`data_depoimento` DATE NOT NULL,
+	`nota_1_depoimento` int(1) NOT NULL,
+	`nota_2_depoimento` int(1) NOT NULL,
+	`nota_3_depoimento` int(1) NOT NULL,
+	`mensagem_depoimento` TEXT NOT NULL,
+	`id_produto` int NOT NULL,
+	PRIMARY KEY (`id_depoimento`)
+);
+
+CREATE TABLE `clientes` (
+	`id_cliente` int(11) NOT NULL AUTO_INCREMENT,
+	`nome_cliente` varchar(20) NOT NULL,
+	`sobrenome_cliente` varchar(50) NOT NULL,
+	`cpf_cnpj_cliente` varchar(18) NOT NULL,
+	`email_cliente` varchar(50) NOT NULL,
+	`senha_cliente` varchar(32) NOT NULL,
+	`telefone_cliente` varchar(15) NOT NULL,
+	`sexo_cliente` bool NOT NULL,
+	`nascimento_cliente` DATE NOT NULL,
+	`status_cliente` bool NOT NULL,
+	PRIMARY KEY (`id_cliente`)
+);
+
+CREATE TABLE `endereco` (
+	`id_endereco` int NOT NULL AUTO_INCREMENT,
+	`id_estado` int NOT NULL,
+	`id_cidade` int NOT NULL,
+	`bairro_endereco` varchar(40) NOT NULL,
+	`rua_endereco` varchar(99) NOT NULL,
+	`num_endereco` varchar(20) NOT NULL,
+	`complemento_endereco` varchar(50) NOT NULL,
+	`observacao_endereco` TEXT NOT NULL,
+	PRIMARY KEY (`id_endereco`)
+);
+
+ALTER TABLE `relacionados` ADD CONSTRAINT `relacionados_fk0` FOREIGN KEY (`id_produto`) REFERENCES `produtos`(`id_produto`);
+
+ALTER TABLE `imagens_produto` ADD CONSTRAINT `imagens_produto_fk0` FOREIGN KEY (`id_produto`) REFERENCES `produtos`(`id_produto`);
+
+ALTER TABLE `relacao_produto_categoria` ADD CONSTRAINT `relacao_produto_categoria_fk0` FOREIGN KEY (`id_categoria`) REFERENCES `categoria`(`id_categoria`);
+
+ALTER TABLE `relacao_produto_categoria` ADD CONSTRAINT `relacao_produto_categoria_fk1` FOREIGN KEY (`id_produto`) REFERENCES `produtos`(`id_produto`);
+
+ALTER TABLE `variacoes` ADD CONSTRAINT `variacoes_fk0` FOREIGN KEY (`id_produto`) REFERENCES `produtos`(`id_produto`);
+
+ALTER TABLE `item_variacao` ADD CONSTRAINT `item_variacao_fk0` FOREIGN KEY (`id_variacoes`) REFERENCES `variacoes`(`id_variacoes`);
+
+ALTER TABLE `depoimentos` ADD CONSTRAINT `depoimentos_fk0` FOREIGN KEY (`id_produto`) REFERENCES `produtos`(`id_produto`);
