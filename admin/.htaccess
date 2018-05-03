@@ -1,0 +1,65 @@
+<IfModule mod_rewrite.c>
+    
+	
+	#Bloquear listagem
+	Options -Indexes
+
+	Options +FollowSymLinks
+	RewriteEngine on
+
+	DefaultLanguage pt-BR
+	AddDefaultCharset UTF-8
+
+	RewriteCond %{SCRIPT_FILENAME} !-d
+	RewriteCond %{SCRIPT_FILENAME} !-f
+	
+
+	#LOGIN**************************************************************
+	RewriteRule ^home?$ index.php [L,QSA]
+	RewriteRule ^login?$ index.php [L,QSA]
+	RewriteRule ^admin/login?$ index.php [L,QSA]
+	
+	
+	#VIEWS - TELAS*****************************************************
+		
+		#VIEWS - CATALOGO**********************************************
+		RewriteRule ^produtos?$ views/catalogo/produtos.php [L,QSA]
+		RewriteRule ^produtos/novo?$ views/catalogo/novo_produto.php [L,QSA]
+		RewriteRule ^filtros?$ views/catalogo/filtros.php [L,QSA]
+		RewriteRule ^compre-junto?$ views/catalogo/compre-junto.php [L,QSA]
+		RewriteRule ^categorias?$ views/catalogo/categorias.php [L,QSA]
+		
+		#VIEWS - VENDAS************************************************
+		RewriteRule ^pedidos?$ views/vendas/pedidos.php [L,QSA]
+		RewriteRule ^clientes?$ views/vendas/clientes.php [L,QSA]
+		RewriteRule ^estoque?$ views/vendas/estoque.php [L,QSA]
+		RewriteRule ^relatorios?$ views/vendas/relatorios.php [L,QSA]
+		RewriteRule ^visao-geral?$ views/vendas/visao-geral.php [L,QSA]
+		
+		#VIEWS - MARKETING*********************************************
+		RewriteRule ^cupom-desconto?$ views/marketing/cupom-desconto.php [L,QSA]
+		RewriteRule ^frete-gratis?$ views/marketing/frete-gratis.php [L,QSA]
+		RewriteRule ^carrinho-abandonado?$ views/marketing/carrinho-abandonado.php [L,QSA]
+		RewriteRule ^depoimentos?$ views/marketing/depoimentos.php [L,QSA]
+		RewriteRule ^assinantes?$ views/marketing/assinantes.php [L,QSA]
+		RewriteRule ^relatorio-acessos?$ views/marketing/relatorio-acessos.php [L,QSA]
+		
+		#VIEWS - LAYOUT************************************************
+		RewriteRule ^banners?$ views/layout/banners.php [L,QSA]
+		RewriteRule ^redes-sociais?$ views/layout/redes-sociais.php [L,QSA]
+		
+		#VIEWS - CONFIGURAÇÕES*****************************************
+		RewriteRule ^configuracoes-gerais?$ views/configuracoes/configuracoes-gerais.php [L,QSA]
+		RewriteRule ^modulos-envio?$ views/configuracoes/modulos-envio.php [L,QSA]
+		RewriteRule ^modulos-pagamentos?$ views/configuracoes/modulos-pagamentos.php [L,QSA]
+		RewriteRule ^redirect-301?$ views/configuracoes/redirect-301.php [L,QSA]
+		RewriteRule ^usuarios?$ views/configuracoes/usuarios.php [L,QSA]
+		RewriteRule ^planos?$ views/configuracoes/planos.php [L,QSA]
+	
+	
+	#CONTROLERS - FUNÇÕES**********************************************
+	RewriteRule ^produtos/save?$ controlers/catalogo/salva_produto.php [L,QSA]
+	
+	
+
+</IfModule>
