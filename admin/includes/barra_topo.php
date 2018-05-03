@@ -88,12 +88,12 @@
                                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                    
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <a href="meus-dados" class="dropdown-item notify-item">
                                         <i class="fi-head"></i> <span>Meus Dados</span>
                                     </a>
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <a href="suporte" class="dropdown-item notify-item">
                                         <i class="fi-help"></i> <span>Suporte</span>
                                     </a>
 
