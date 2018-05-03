@@ -28,7 +28,7 @@ diogo
             </div>
             <h3 class="page-title">REDES SOCIAIS</h3>
 
-            ediçao emilio 
+            ediçao emilio 2
         </div>
 	</div>
 </div>
