@@ -27,8 +27,13 @@
                 
             </div>
             <h3 class="page-title">REDES SOCIAIS</h3>
+<<<<<<< HEAD
 			diogo222
             ediçao emilio 
+=======
+
+            ediçao emilio 2
+>>>>>>> 744e25dc3283ead144c18fd0298435660053f8af
         </div>
 	</div>
 </div>
