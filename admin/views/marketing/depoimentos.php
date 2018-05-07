@@ -10,14 +10,14 @@
                 
                 
             </div>
-            <h3 class="page-title">DEPOIMENTOS</h3>
+            <h3 class="page-title">Depoimentos</h3>
         </div>
 	</div>
     
 </div>
 <hr>
 
-
+<?php include_once ("listagem/lista_depoimentos.php"); ?>
 
 
 

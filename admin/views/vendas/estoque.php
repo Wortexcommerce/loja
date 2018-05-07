@@ -18,21 +18,21 @@
                         </div>
                     </div>
                     &nbsp;
-                    <a href="produtos/novo">
                     <button class="btn btn-custom" type="button">
-                    	<i class="fa fa-plus fa-fw"></i> Novo Produto
+                    	<i class="fa fa-save fa-fw"></i> Salvar
                     </button>
-                    </a>
                 </form>
                 
             </div>
-            <h3 class="page-title">ESTOQUE</h3>
+            <h3 class="page-title">Estoque</h3>
 
         </div>
 	</div>
 </div>
 
 <hr>
+
+<?php include_once ("listagem/lista_estoque.php"); ?>
 
 
 

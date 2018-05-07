@@ -25,7 +25,7 @@
                 </form>
                 
             </div>
-            <h3 class="page-title">PRODUTOS</h3>
+            <h3 class="page-title">Produtos</h3>
         </div>
 	</div>
     
@@ -33,7 +33,7 @@
 
 <hr>
 
-
+<?php include_once ("listagem/lista_produtos.php"); ?>
 
 
 

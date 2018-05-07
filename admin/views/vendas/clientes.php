@@ -17,22 +17,20 @@
                           	</button>
                         </div>
                     </div>
-                    &nbsp;
-                    <a href="produtos/novo">
-                    <button class="btn btn-custom" type="button">
-                    	<i class="fa fa-plus fa-fw"></i> Novo Cliente
-                    </button>
-                    </a>
+                    
                 </form>
                 
             </div>
-            <h3 class="page-title">CLIENTES</h3>
+            <h3 class="page-title">Clientes</h3>
 
         </div>
 	</div>
 </div>
 
 <hr>
+
+<?php include_once ("listagem/lista_clientes.php"); ?>
+
 
 
 

@@ -14,13 +14,14 @@
                 </a>
                 
             </div>
-            <h3 class="page-title">CUPONS</h3>
+            <h3 class="page-title">Cupons</h3>
         </div>
 	</div>
     
 </div>
 <hr>
 
+<?php include_once ("listagem/lista_cupons.php"); ?>
 
 
 

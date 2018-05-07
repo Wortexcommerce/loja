@@ -33,7 +33,7 @@
 
 <hr>
 
-
+<?php include_once ("listagem/lista_banners.php"); ?>
 
 
 

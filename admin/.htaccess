@@ -34,7 +34,7 @@
 		RewriteRule ^clientes?$ views/vendas/clientes.php [L,QSA]
 		RewriteRule ^estoque?$ views/vendas/estoque.php [L,QSA]
 		RewriteRule ^relatorios?$ views/vendas/relatorios.php [L,QSA]
-		RewriteRule ^visao-geral?$ views/vendas/visao-geral.php [L,QSA]
+		RewriteRule ^visao-geral?$ index.php [L,QSA]
 		
 		#VIEWS - MARKETING*********************************************
 		RewriteRule ^cupom-desconto?$ views/marketing/cupom-desconto.php [L,QSA]

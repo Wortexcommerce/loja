@@ -10,14 +10,14 @@
                
                 
             </div>
-            <h3 class="page-title">CARRINHOS ABANDONADOS</h3>
+            <h3 class="page-title">Carrinhos Abandonados</h3>
         </div>
 	</div>
     
 </div>
 <hr>
 
-
+<?php include_once ("listagem/lista_carrinho-abandonado.php"); ?>
 
 
 
