@@ -6,12 +6,6 @@
 	<div class="col-sm-12">                    
     	<div class="page-title-box">
         	<div class="btn-group pull-right">
-            
-            	
-               <button class="btn btn-custom" type="button">
-               		<i class="fa fa-save fa-fw"></i> Salvar
-               </button>
-              	&nbsp;
             	
                <a href="produtos/novo">
                     <button class="btn btn-custom" type="button">
@@ -20,13 +14,14 @@
                </a>
                 
             </div>
-            <h3 class="page-title">REGRAS DE FRETE COM DESCONTO</h3>
+            <h3 class="page-title">Regras de Frete</h3>
         </div>
 	</div>
     
 </div>
 <hr>
 
+<?php include_once ("listagem/lista_fretes.php"); ?>
 
 
 

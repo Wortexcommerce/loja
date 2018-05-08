@@ -14,7 +14,7 @@
                                     <li><a href="clientes">Clientes</a></li>
                                     <li><a href="estoque">Estoque</a></li>
                                     <li><a href="relatorios">Relatórios</a></li>
-                                    <li><a href="visao-geral">Visão geral</a></li>
+                                    <li><a href="visao-geral">Ínicio</a></li>
                                 </ul>
                             </li>
 

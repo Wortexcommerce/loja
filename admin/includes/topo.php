@@ -21,8 +21,11 @@ require(dirname(__FILE__)."/../config.php");
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/default.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
-
+        
+        
+		
         <script src="assets/js/modernizr.min.js"></script>
         
     </head>
