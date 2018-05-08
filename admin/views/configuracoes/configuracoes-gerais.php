@@ -35,6 +35,71 @@
 <hr>
 
 
+    <ul class="nav nav-tabs tabs-bordered nav-justified">
+        
+        <li class="nav-item">
+            <a href="#aba01" data-toggle="tab" aria-expanded="false" class="nav-link active">
+            <i class="fa fa-building fa-fw"></i><br>
+            PRINCIPAL
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a href="#aba02" data-toggle="tab" aria-expanded="true" class="nav-link">
+            <i class="fa fa-truck fa-fw"></i><br>
+            PREÇOS / ENTREGA
+            </a>
+        </li>
+                                
+        <li class="nav-item">
+            <a href="#aba03" data-toggle="tab" aria-expanded="true" class="nav-link">
+            <i class="fa fa-clone fa-fw"></i><br>
+            CATEGORIAS  
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a href="#aba04" data-toggle="tab" aria-expanded="true" class="nav-link">
+            <i class="fa fa-rss fa-fw"></i><br>
+            MARKETING
+            </a>
+        </li>
+                         
+    </ul>
+    
+<div class="card-box">
+
+    <div class="tab-content">
+        
+        <div class="tab-pane active" id="aba01">
+            <?php include_once ("telas-configuracoes/tela_configuracao01.php"); ?>                         
+        </div>
+        
+        <div class="tab-pane" id="aba02">
+            <?php include_once ("telas-configuracoes/tela_configuracao02.php"); ?>   
+        </div>  
+        
+         <div class="tab-pane" id="aba03">
+            <?php include_once ("telas-configuracoes/tela_configuracao03.php"); ?>   
+        </div>  
+        
+         <div class="tab-pane" id="aba04">
+            <?php include_once ("telas-configuracoes/tela_configuracao04.php"); ?>   
+        </div>  
+                          
+    
+    </div>
+
+
+</div>
+
+
+
+
+
+<?php include_once ("../../includes/footer_interno.php"); ?>
+<?php include_once ("../../includes/rodape.php"); ?>
+<?php include_once ("../../includes/editor_texto.php"); ?>
 
 
 
