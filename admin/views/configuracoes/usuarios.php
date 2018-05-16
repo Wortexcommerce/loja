@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     &nbsp;
-                    <a href="produtos/novo">
+                    <a href="novo/usuario">
                     <button class="btn btn-custom" type="button">
                     	<i class="fa fa-plus fa-fw"></i> Novo Usuário
                     </button>
@@ -32,7 +32,7 @@
 
 <hr>
 
-
+<?php include_once ("listagem/lista-usuarios.php"); ?>
 
 
 

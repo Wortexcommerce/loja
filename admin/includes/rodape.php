@@ -1,4 +1,4 @@
-
+<?php require("modais.php"); ?>
 
 <!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
@@ -7,7 +7,7 @@
         <script src="assets/js/waves.js"></script>
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/sortable.js"></script>
-		
+		<script src="assets/plugins/switchery/switchery.min.js"></script>
         <script src="assets/js/jquery.youtubebackground.js"></script>
 
         <!-- App js -->

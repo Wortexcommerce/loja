@@ -62,3 +62,8 @@ hr {
       background-color:#EBEBEB;
       height: 3px;
     }
+
+.ajusta_altura{ line-height: 140px }
+.ajusta_altura2{ line-height: 90px }
+
+.cor-porcentagem{ color: #2AC39A }

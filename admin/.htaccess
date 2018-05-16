@@ -55,6 +55,7 @@
 		RewriteRule ^redirect-301?$ views/configuracoes/redirect-301.php [L,QSA]
 		RewriteRule ^usuarios?$ views/configuracoes/usuarios.php [L,QSA]
 		RewriteRule ^planos?$ views/configuracoes/planos.php [L,QSA]
+		RewriteRule ^novo/usuario?$ views/configuracoes/novo-usuario.php [L,QSA]
 		
 		#VIEWS - SUPORTE***********************************************
 		RewriteRule ^meus-dados?$ views/suporte/meus-dados.php [L,QSA]

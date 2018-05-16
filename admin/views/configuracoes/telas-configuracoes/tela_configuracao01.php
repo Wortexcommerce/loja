@@ -86,8 +86,6 @@
                         
                     </div>
 
-                  
-
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">Loja no Facebook</label>
                         <div class="input-group">
@@ -155,15 +153,19 @@
                         
                     </div>
 
-                  
-
-                  
-                    
+                
                 </div>
                                 
             </div>
         </div>
      </div>
 
+     <div class="col-md-12">
+        <hr>
+        <button class="btn btn-success pull-right" type="button">
+            <i class="fa fa-save fa-fw"></i> Salvar
+        </button>
+    </div> 
 
 </div>
+

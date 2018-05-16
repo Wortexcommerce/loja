@@ -1,5 +1,6 @@
 <?php
 require(dirname(__FILE__)."/../config.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +24,7 @@ require(dirname(__FILE__)."/../config.php");
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/default.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
-        
+        <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet">
         
 		
         <script src="assets/js/modernizr.min.js"></script>

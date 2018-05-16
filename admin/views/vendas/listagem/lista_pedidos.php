@@ -11,7 +11,22 @@
                     <th>Data Aprovação</th>
                     <th>Pagamento/Envio</th>
                     <th>Total</th>
-                    <th>Status</th>
+                    <th>
+
+                    <div class="btn-group m-b-10">
+                        <button type="button" class="btn btn-success">Status</button>
+                        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                                                
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Aprovado</a>
+                            <a class="dropdown-item" href="#">Cancelados</a>
+                            <a class="dropdown-item" href="#">Entregue</a>
+                            <a class="dropdown-item" href="#">Enviado</a>
+                            <a class="dropdown-item" href="#">Finalizado</a>
+                        </div>
+                    </div><!-- /btn-group --></th>
                 </tr>
             </thead>
             <tbody >

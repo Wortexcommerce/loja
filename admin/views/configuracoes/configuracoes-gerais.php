@@ -7,26 +7,9 @@
 	<div class="col-sm-12">                    
     	<div class="page-title-box">
         	<div class="btn-group pull-right">
-            	
-                <form class="form-inline" action="/action_page.php">
-                	<div class="input-group">
-                    	<input type="text" class="form-control" placeholder="Pesquisa">
-                        <div class="input-group-btn">
-                        	<button class="btn btn-success" type="submit">
-                            	<i class="fa fa-search"></i>
-                          	</button>
-                        </div>
-                    </div>
-                    &nbsp;
-                    <a href="produtos/novo">
-                    <button class="btn btn-custom" type="button">
-                    	<i class="fa fa-plus fa-fw"></i> Novo Produto
-                    </button>
-                    </a>
-                </form>
-                
+            
             </div>
-            <h3 class="page-title">CONFIGURAÇÕES GERAIS</h3>
+            <h3 class="page-title">Configurações gerais</h3>
 
         </div>
 	</div>
@@ -40,28 +23,28 @@
         <li class="nav-item">
             <a href="#aba01" data-toggle="tab" aria-expanded="false" class="nav-link active">
             <i class="fa fa-building fa-fw"></i><br>
-            PRINCIPAL
+            PRINCIPAL/REDES SOCIAIS
             </a>
         </li>
         
         <li class="nav-item">
             <a href="#aba02" data-toggle="tab" aria-expanded="true" class="nav-link">
-            <i class="fa fa-truck fa-fw"></i><br>
-            PREÇOS / ENTREGA
+            <i class="fa fa-cogs fa-fw"></i><br>
+            PREFERÊNCIAS
             </a>
         </li>
                                 
         <li class="nav-item">
             <a href="#aba03" data-toggle="tab" aria-expanded="true" class="nav-link">
-            <i class="fa fa-clone fa-fw"></i><br>
-            CATEGORIAS  
+            <i class="fa fa-refresh fa-fw"></i><br>
+            AUTOMAÇÕES  
             </a>
         </li>
         
         <li class="nav-item">
             <a href="#aba04" data-toggle="tab" aria-expanded="true" class="nav-link">
             <i class="fa fa-rss fa-fw"></i><br>
-            MARKETING
+            SEO/REDIRECT 301
             </a>
         </li>
                          

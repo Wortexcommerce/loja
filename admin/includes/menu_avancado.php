@@ -45,7 +45,7 @@
                                 <a href="#"><i class="fi-paper-stack"></i>Layout</a>
                                 <ul class="submenu">
                                     <li><a href="banners">Banners</a></li>
-                                    <li><a href="redes-sociais">Redes sociais</a></li>
+                                    <li><a href="configuracoes-gerais">Redes sociais</a></li>
                                 </ul>
                             </li>
 
@@ -55,7 +55,7 @@
                                     <li><a href="configuracoes-gerais">Configurações Gerais</a></li>
                                     <li><a href="modulos-envio">Módulos de envio</a></li>
                                     <li><a href="modulos-pagamentos">Módulos de pagamentos</a></li>
-                                    <li><a href="redirect-301">Redirect 301</a></li>
+                                    <li><a href="configuracoes-gerais">Redirect 301</a></li>
                                     <li><a href="usuarios">Usuários</a></li>
                                     <li><a href="planos">Planos</a></li>
                                 </ul>
