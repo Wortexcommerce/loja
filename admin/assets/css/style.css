@@ -3552,7 +3552,7 @@ h3.timeline-title {
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 150px; }
+  width: 250px; }
 .transaction-list .tran-price {
   margin-left: 30px; }
 

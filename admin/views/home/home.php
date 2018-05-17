@@ -10,7 +10,7 @@
 </div>
 
 
-<?php require ("listagem/lista_banners.php"); ?>
+<?php require ("listagem/banners.php"); ?>
 
 
 <div class="row mt-30">
@@ -52,6 +52,21 @@
    	</div>
     
     
+</div>
+
+
+<?php require ("listagem/grafico_pedidos.php"); ?>
+
+
+
+<div class="row">
+	
+    <?php require ("listagem/produtos_sem_estoque.php"); ?>
+
+	<?php require ("listagem/mais_buscados.php"); ?>
+    
+    <?php require ("listagem/mais_vendidos.php"); ?>
+
 </div>
 
 
