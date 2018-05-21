@@ -9,7 +9,7 @@ class AvisosLoja{
 		if(isset($_SESSION['avisos-admin-wortex-classe'])){
 			
 			echo '<div class="alert alert-'.$_SESSION['avisos-admin-wortex-classe'].' avisos-loja">';
-				echo '<div class="container-fluid">';
+				echo '<div class="container">';
   					echo $_SESSION['avisos-admin-wortex-frase'];
 				echo '</div>';
 			echo '</div>';

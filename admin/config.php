@@ -1,21 +1,17 @@
 <?php
+ob_start();
+@session_start();
 
 //LOCALHOST//
-if($_SERVER['HTTP_HOST']=='localhost' || $_SERVER['HTTP_HOST']=='127.0.0.1'){
-	
+if($_SERVER['HTTP_HOST']=='localhost' || $_SERVER['HTTP_HOST']=='127.0.0.1'){	
 	$caminho_admin = 'http://'.$_SERVER['HTTP_HOST'].'/loja/admin/';	
 	$caminho_site = 'http://'.$_SERVER['HTTP_HOST'].'/loja/';	
-	
 //WEB//	
-} else {
-	
+} else {	
 	$caminho_admin = 'http://'.$_SERVER['HTTP_HOST'].'/admin/';
-	$caminho_site = 'http://'.$_SERVER['HTTP_HOST'];
-	
+	$caminho_site = 'http://'.$_SERVER['HTTP_HOST'];	
 }
 
-@session_start();
-ob_start();
 
 define("ADMIN_WORTEX", $caminho_admin);
 define("SITE_WORTEX", $caminho_site);

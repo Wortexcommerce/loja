@@ -1,15 +1,18 @@
 <?php include_once ("../../includes/topo.php"); ?>
 <?php include_once ("../../includes/header_interno.php"); ?>
 
-<form>
+<form method="post" action="<?php echo ADMIN_WORTEX; ?>controlers/catalogo/salva_produto.php">
+
 <div class="row">
 	<div class="col-sm-12">                    
     	<div class="page-title-box">
         	<div class="btn-group pull-right">
-            	<button class="btn btn-link" type="button">
+            	 <a href="">
+            	 <button class="btn btn-link" type="button">
                  	<i class="fa fa-backward fa-fw"></i> voltar
                  </button>
-				 <button class="btn btn-success" type="button">
+                 </a>
+				 <button class="btn btn-success" type="submit">
                  	<i class="fa fa-save fa-fw"></i> Salvar
                  </button>
             </div>
@@ -17,9 +20,9 @@
         </div>
 	</div>
 </div>
-</form>
 
 
+	<hr>
                  
 
 	<ul class="nav nav-tabs tabs-bordered nav-justified">
@@ -80,7 +83,7 @@
 
 </div>
 
-
+</form>
 
 
 
