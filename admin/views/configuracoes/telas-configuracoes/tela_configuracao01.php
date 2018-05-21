@@ -81,7 +81,7 @@
                     	<label  class="col-form-label">URL da sua Fanpage</label>
                     	<div class="input-group">
                         	<span class="input-group-addon">http://www.facebook.com/</i></span>
-                        	<input type="email" class="form-control" id="inputEmail4">
+                        	<input type="text" class="form-control" id="inputEmail4">
                         </div>
                         
                     </div>
@@ -89,7 +89,7 @@
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">Loja no Facebook</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                             <a href="" class="input-group-addon"><span><i class="fa fa-external-link"></a></span></i>
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Abra o link do aplicativo no facebook e siga as instruções para conectar sua loja com facebook.</small>
@@ -112,7 +112,7 @@
                         <label  class="col-form-label">URL da sua conta no Twitter</label>
                         <div class="input-group">
                             <span class="input-group-addon">http://www.twitter.com/</i></span>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                         
                     </div>
@@ -121,7 +121,7 @@
                         <label  class="col-form-label">URL da sua conta no Pinterest</label>
                         <div class="input-group">
                             <span class="input-group-addon">http://www.pinterest.com/</i></span>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                         
                     </div>
@@ -130,7 +130,7 @@
                         <label  class="col-form-label">URL da sua conta no Instagram</label>
                         <div class="input-group">
                             <span class="input-group-addon">http://www.instagram.com/</i></span>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                         
                     </div>
@@ -139,7 +139,7 @@
                         <label  class="col-form-label">URL da sua conta no Google</label>
                         <div class="input-group">
                             <span class="input-group-addon">http://plus.google.com/</i></span>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                         
                     </div>
@@ -148,7 +148,7 @@
                         <label  class="col-form-label">URL da sua conta no Youtube</label>
                         <div class="input-group">
                             <span class="input-group-addon">http://www.youtube.com/</i></span>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                         
                     </div>

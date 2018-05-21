@@ -28,7 +28,7 @@ Contrate o Certificado de Segurança para seu domínio e turbine sua loja com um
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">E-mail principal da loja</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                         <small id="emailHelp" class="form-text text-muted">E-mail de recebimento do formulário de contato.</small>
                     </div>
@@ -36,7 +36,7 @@ Contrate o Certificado de Segurança para seu domínio e turbine sua loja com um
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">E-mail BBC</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                          <small id="emailHelp" class="form-text text-muted">E-mail para receber cópias de todos os pedidos novos da loja.<br> <strong>OBS: Para mais de um email, basta separá-los por vírgula.</strong></small>
                     </div>
@@ -45,7 +45,7 @@ Contrate o Certificado de Segurança para seu domínio e turbine sua loja com um
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">Assinatura dos E-mails</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                          <small id="emailHelp" class="form-text text-muted">Alterar a assinatura padrão dos e-mails:
                                                                             <strong>"Atenciosamente, NOME DA LOJA."</strong><br>
@@ -56,7 +56,7 @@ Contrate o Certificado de Segurança para seu domínio e turbine sua loja com um
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">E-mail para receber notificações quando o produto estiver fora do estoque</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@ Contrate o Certificado de Segurança para seu domínio e turbine sua loja com um
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">Máximo de produtos exibidos na página inicial</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                         <small id="emailHelp" class="form-text text-muted">A lista não pode exibir mais do que <strong>100 produtos.</strong></small>
                     </div>

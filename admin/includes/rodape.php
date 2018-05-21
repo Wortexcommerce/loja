@@ -10,7 +10,10 @@
 		<script src="assets/plugins/switchery/switchery.min.js"></script>
         <script src="assets/js/jquery.youtubebackground.js"></script>
         
-        
+        <!-- Mascara -->
+        <script src="assets/js/mascara.js"></script>
+        <script src="assets/js/mascara_dinheiro.js"></script>
+
         <!-- Diversos -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
@@ -47,6 +50,8 @@
 				videoId: 'R2zFX3ZON_c'
 			});
 		</script>
+
+        
         
     </body>
 </html>

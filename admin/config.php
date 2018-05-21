@@ -19,6 +19,7 @@ define('ROOT_DIR', dirname(__FILE__).'/' );
 
 
 require(ROOT_DIR."../class/class.db.php");
+require(ROOT_DIR."class/class.seguranca.php");
 require(ROOT_DIR."class/class.login.php");
 require(ROOT_DIR."class/class.dados_usuario.php");
 require(ROOT_DIR."class/class.dados_loja.php");
