@@ -16,6 +16,11 @@
             <tbody >
             	
                 	<?php
+						if(isset($busca)){
+							echo 1;	
+						} else {
+							echo 0;
+						}	
 						$x=1;
 						while($x<16){
 							echo '<tr>';

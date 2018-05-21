@@ -7,9 +7,9 @@
     	<div class="page-title-box">
         	<div class="btn-group pull-right">
             	
-                <form class="form-inline" action="/action_page.php">
+                <form class="form-inline" action="pesquisa/produto" method="get">
                 	<div class="input-group">
-                    	<input type="text" class="form-control" placeholder="Pesquisa">
+                    	<input name="busca" required type="text" class="form-control" placeholder="Pesquisa">
                         <div class="input-group-btn">
                         	<button class="btn btn-success" type="submit">
                             	<i class="fa fa-search"></i>

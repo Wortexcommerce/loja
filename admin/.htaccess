@@ -69,5 +69,10 @@
 		RewriteRule ^produtos/save?$ controlers/catalogo/salva_produto.php [L,QSA]
 	
 	
-
+	
+	
+	#PESQUISAS - TELAS*************************************************
+	RewriteRule ^pesquisa/produto?$ views/catalogo/produtos.php [L,QSA]
+	
+	
 </IfModule>
