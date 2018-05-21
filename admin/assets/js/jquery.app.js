@@ -27,7 +27,7 @@
     }
     function initScrollbar() {
         $('.slimscroll').slimscroll({
-            height: 'auto',
+            height: '330',
             position: 'right',
             size: "8px",
             color: '#9ea5ab'

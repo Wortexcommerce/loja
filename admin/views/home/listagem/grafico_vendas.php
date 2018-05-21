@@ -2,7 +2,7 @@
 <div class="row">
                     <div class="col-xl-12">
                         <div class="card-box">
-                            <h4 class="header-title">Transactions History</h4>
+                            <h4 class="header-title">Histórico de Pedidos</h4>
 
                             <div class="row">
                                 <div class="col-sm-4">

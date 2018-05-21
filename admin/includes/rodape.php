@@ -22,14 +22,22 @@
         <script src="assets/plugins/flot-chart/jquery.flot.min.js"></script>
         <script src="assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script>
         <script src="assets/plugins/flot-chart/jquery.flot.pie.js"></script>
-
-        <!-- App js -->
+		
+         <!-- Funções -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
+       
 
+		<!-- Funções Wortex-->
 		<script src="javascript/login.js"></script>
         <script src="javascript/scripts.js"></script>
-        <script src="javascript/graficos_home.js"></script>
+        
+        <!-- Funções Gráficos Home -->
+        <script src="javascript/grafico_vendas_home.js"></script>
+        <script src="javascript/grafico_mais_vendidos_home.js"></script>
+        
+        
+        
         
         
         <script>

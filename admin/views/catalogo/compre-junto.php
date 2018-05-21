@@ -24,7 +24,7 @@
                 </form>
                 
             </div>
-            <h3 class="page-title">COMPRE JUNTO</h3>
+            <h3 class="page-title">Compre Junto</h3>
 
         </div>
 	</div>
