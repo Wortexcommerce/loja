@@ -1,13 +1,13 @@
 <?php include_once ("../../includes/topo.php"); ?>
 <?php include_once ("../../includes/header_interno.php"); ?>
 
-<form method="post" action="<?php echo ADMIN_WORTEX; ?>controlers/catalogo/salva_produto.php">
+<form method="post" action="produtos/save">
 
 <div class="row">
 	<div class="col-sm-12">                    
     	<div class="page-title-box">
         	<div class="btn-group pull-right">
-            	 <a href="">
+            	 <a href="<?php echo ADMIN_WORTEX; ?>produtos">
             	 <button class="btn btn-link" type="button">
                  	<i class="fa fa-backward fa-fw"></i> voltar
                  </button>

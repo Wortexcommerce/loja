@@ -64,7 +64,9 @@
 	
 	
 	#CONTROLERS - FUNÇÕES**********************************************
-	RewriteRule ^produtos/save?$ controlers/catalogo/salva_produto.php [L,QSA]
+		
+		#CONTROLERS - CATALOGO**********************************************
+		RewriteRule ^produtos/save?$ controlers/catalogo/salva_produto.php [L,QSA]
 	
 	
 
