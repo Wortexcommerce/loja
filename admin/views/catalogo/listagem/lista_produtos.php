@@ -16,27 +16,53 @@
             <tbody >
             	
                 	<?php
+						
 						if(isset($busca)){
-							echo 1;	
+							$sql = $db->select("SELECT ");
 						} else {
-							echo 0;
+							$sql = $db->select("SELECT nome_produto, sku_produto, preco_normal_produto, preco_promocional_produto, quantidade_produto FROM cad_produtos ORDER BY sku_produto DESC");
 						}	
-						$x=1;
-						while($x<16){
+						
+					
+						if($db->rows($sql)){
+							while($row = $db->expand($sql)){
+								echo '<tr>';
+									echo '<td><input type="checkbox"></td>';
+									echo '<td style="padding:0">';
+										echo '<div class="img-admin">';
+											echo '<img src="'.SITE_WORTEX.'uploads/images/produtos/produto.jpg">';
+										echo '</div>';
+									echo '</td>';
+									echo '<td>'.$row['sku_produto'].'</td>';
+									echo '<td>'.$row['nome_produto'].'</td>';
+									
+									//PREÇO NORMAL
+									echo '<td>';
+										if($row['preco_promocional_produto']!='0.00'){
+											echo '<span class="txt-riscado">'; 	
+												echo 'R$ '.valores($row['preco_normal_produto']);
+											echo '</span>';
+										} else {
+											echo 'R$ '.valores($row['preco_normal_produto']);
+										}
+									echo '</td>';
+									
+									//PREÇO PROMOCIONAL
+									echo '<td>';
+										if($row['preco_promocional_produto']!='0.00'){
+											echo 'R$ '.valores($row['preco_promocional_produto']);
+										}
+									echo '</td>';
+									
+									//QUANTIDADE
+									echo '<td>'.$row['quantidade_produto'].'</td>';
+								echo '</tr>';
+								
+							}
+						} else {
 							echo '<tr>';
-								echo '<td><input type="checkbox"></td>';
-								echo '<td style="padding:0">';
-									echo '<div class="img-admin">';
-										echo '<img src="'.SITE_WORTEX.'uploads/images/produtos/produto.jpg">';
-									echo '</div>';
-								echo '</td>';
-								echo '<td>00'.$x.'</td>';
-								echo '<td>Escova Progressiva Select One Sem Formol 1 litro - Prohall Cosmétic</td>';
-								echo '<td><span class="txt-riscado">R$ 199,99</span></td>';
-								echo '<td>R$ 99,99</td>';
-								echo '<td>999</td>';
+								echo '<td colspan="20" align="center">Nenhum ítem encontrado.</td>';
 							echo '</tr>';
-							$x++;	
 						}
 					?>
                 	

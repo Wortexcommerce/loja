@@ -27,4 +27,9 @@ require(ROOT_DIR."class/class.avisos_loja.php");
 require(ROOT_DIR."class/class.menu.php");
 require(ROOT_DIR."class/class.pesquisas.php");
 
+
+//VERIFICA SE ESTÁ LOGADO//
+$Login = new Login();
+$logado = $Login->VerificaLogadoInternas();
+
 ?>

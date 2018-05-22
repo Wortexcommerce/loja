@@ -1,6 +1,5 @@
 <?php
 require(dirname(__FILE__)."/../config.php");
-
 ?>
 <!DOCTYPE html>
 <html>

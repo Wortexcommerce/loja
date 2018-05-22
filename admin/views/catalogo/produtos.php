@@ -7,7 +7,7 @@
     	<div class="page-title-box">
         	<div class="btn-group pull-right">
             	
-                <form class="form-inline" action="pesquisa/produto" method="get">
+                <form class="form-inline" action="pesquisa/produto" method="post">
                 	<div class="input-group">
                     	<input name="busca" required type="text" class="form-control" placeholder="Pesquisa">
                         <div class="input-group-btn">

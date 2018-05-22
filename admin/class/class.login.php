@@ -5,7 +5,15 @@ ob_start();
 class Login{
 	
 	
-	public function VerificaLogado(){	
+	public function VerificaLogadoInternas(){
+		if(basename($_SERVER['PHP_SELF'])!='index.php'){
+			if(!isset($_SESSION['user_admin_wortex'])){
+				header("Location: ".ADMIN_WORTEX."");
+			}
+		}
+	}
+	
+	public function VerificaLogadoHome(){	
 		if(isset($_SESSION['user_admin_wortex'])){
 			
 			include_once ("includes/header_interno.php");
