@@ -33,7 +33,7 @@
                         <label  class="col-form-label">Preço Custo</label>
                         <div class="input-group">
                             <span class="input-group-addon">R$</span>
-                            <input type="text" class="form-control" name="preco_custo_produto" >
+                            <input type="text" class="form-control mascara-dinheiro" name="preco_custo_produto" data-thousands="" data-decimal=".">
                         </div>
                          <small id="emailHelp" class="form-text text-muted">Não é exibido na loja.</small>
                     </div>
@@ -56,16 +56,16 @@
                     <div class="form-group col-md-6">
                         <label  class="col-form-label">Peso</label>
                         <div class="input-group">
+                            <input type="number" class="form-control mascara-dinheiro" data-precision="3" name="peso_produto" data-thousands="" data-decimal=".">
                             <span class="input-group-addon">KG</span>
-                            <input type="text" class="form-control" name="peso_produto" >
                         </div>
-                        <small id="emailHelp" class="form-text text-muted">Em kilogramas Ex:0,500.</small>
+                        <small id="emailHelp" class="form-text text-muted">Em kilogramas Ex:0,50 = 500g.</small>
                     </div>
                     
                     <div class="form-group col-md-6">
                         <label  class="col-form-label">Comprimento</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="comprimento_produto" >
+                            <input type="text" class="form-control mascara-dinheiro" name="comprimento_produto" data-thousands="" data-decimal=".">
                             <span class="input-group-addon"><i class="fa fa-arrows-h fa-fw"></i></span>
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Em centímetros.</small>
@@ -74,7 +74,7 @@
                     <div class="form-group col-md-6">
                         <label  class="col-form-label">Altura</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="altura_produto" >
+                            <input type="text" class="form-control mascara-dinheiro" name="altura_produto" data-thousands="" data-decimal=".">
                             <span class="input-group-addon"><i class="fa fa-arrows-v fa-fw"></i></span>
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Em centímetros.</small>
@@ -83,7 +83,7 @@
                     <div class="form-group col-md-6">
                         <label  class="col-form-label">Largura</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="largura_produto" >
+                            <input type="text" class="form-control mascara-dinheiro" name="largura_produto" data-thousands="" data-decimal=".">
                             <span class="input-group-addon"><i class="fa fa-arrows-alt fa-fw"></i></span>
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Em centímetros.</small>

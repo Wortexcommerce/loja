@@ -5,6 +5,9 @@ $(function  () {
 
   //Mascara de dinheiro
   $('.mascara-dinheiro').maskMoney();
+
+
+
 });
 
 

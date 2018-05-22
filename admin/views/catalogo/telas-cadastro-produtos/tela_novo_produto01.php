@@ -7,7 +7,7 @@
 
     	<div class="form-group">
     		<label  class="col-form-label">Nome</label>
-        	<input type="text" class="form-control" name="nome_produto"  maxlength=150>
+        	<input type="text" class="form-control" name="nome_produto" required=""  maxlength=150>
         	<small id="emailHelp" class="form-text text-muted">Exemplo: Tênis Nike Runner, Camiseta Under Armour.</small>
     	</div>
         
