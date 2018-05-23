@@ -12,6 +12,11 @@
 .table > tbody > tr > td a{color:#333}
 .table > tbody > tr > td a:hover{text-decoration:underline}
 
+.badge-categorias {
+  padding: .35em .5em;
+  border-radius:6px;
+}
+
 .tab-pane h5 i{margin-right:4px}
 
 .img-admin {

@@ -46,7 +46,7 @@ class Pesquisas{
 		$x=1;
 		$espacos = '';
 		while($x<=$num){
-			$espacos .= '&nbsp;&nbsp;&nbsp;';
+			$espacos .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 			$x++;
 		}
 		
@@ -56,7 +56,7 @@ class Pesquisas{
 			$num++;
 			while($ln_subcategorias = $db->expand($sub_principais)){
 				$id_subcategoria = $ln_subcategorias['id_categoria'];
-				echo '<li class="list-group-item">'.$espacos.'<i class="fa fa-fw fa-long-arrow-right"></i>'.$ln_subcategorias['nome_categoria'].'</li>';
+				echo '<li class="list-group-item"><input type="checkbox" name="subcategoria[]" value="'.$ln_categorias['id_categoria'].'">'.$espacos.'<span class="badge-categorias badge-success"><i class="fa fa-fw fa-long-arrow-right"></i>'.$ln_subcategorias['nome_categoria'].'</span></li>';
 				$objeto = new Pesquisas();
         		$objeto->ListagemSubCategorias($id_subcategoria,$num);
 			}
@@ -72,7 +72,7 @@ class Pesquisas{
 			$cat_principais = $db->select("SELECT nome_categoria, id_categoria FROM cad_categoria WHERE status_categoria='1' AND pai_categoria='0' ORDER BY ordem_categoria, nome_categoria");
 			
 			while($ln_categorias = $db->expand($cat_principais)){
-				echo '<li class="list-group-item"><input type="checkbox"><b>'.$ln_categorias['nome_categoria'].'</b></li>';
+				echo '<li class="list-group-item"><input type="checkbox" name="categoria[]" value="'.$ln_categorias['id_categoria'].'"><b>'.$ln_categorias['nome_categoria'].'</b></li>';
 				
 					$id_categoria = $ln_categorias['id_categoria'];
 					
