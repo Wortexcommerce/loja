@@ -22,20 +22,20 @@
         <div class="card">
             <h6 class="card-header">Cadstre o novo usuário</h6>
             <div class="card-body">
-            
+            <form>
                 <div class="form-row">
 
                     <div class="form-group col-md-4">
                         <label  class="col-form-label">Nome</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text"  required="" maxlength="50" name="nome_usuario" class="form-control" >
                         </div>
                     </div>
 
                     <div class="form-group col-md-4">
                         <label  class="col-form-label">Sobrenome</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" required="" maxlength="50" name="sobrenome_usuario">
                         </div>
                     </div>
 
@@ -43,9 +43,9 @@
                     <div class="form-group col-md-4">
                         <label  class="col-form-label">Tipo</label>
                         <div class="input-group">
-                            <select class="form-control select2">
+                            <select class="form-control select2" required="" name="tipo_usuario">
                                 <option value="">Escolha</option>
-                                <option value="">Lojista</option>
+                                <option value="">Admin</option>
                                 <option value="">Vendedor</option>
                             </select>
                         </div>
@@ -54,38 +54,23 @@
                     <div class="form-group col-md-12">
                         <label  class="col-form-label">E-mail</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="email" class="form-control" required="" maxlength="99" name="email_usuario">
                         </div>
                     </div>
 
-                    <div class="col-md-12">
-                         <p class="text-muted font-13 mt-3 mb-2">Defina as permissões</p>
-                         <div class="checkbox form-check-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label for="inlineCheckbox1"> Editar HTML e trocar o Template </label>
-                         </div>
-                         <div class="checkbox checkbox-success form-check-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option1" checked>
-                            <label for="inlineCheckbox2"> Exibir estatísticas de vendas no painel </label>
-                        </div>
-                        <div class="checkbox checkbox-pink form-check-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option1">
-                            <label for="inlineCheckbox3"> Acessar ferramentas de marketing </label>
-                        </div>
-                    </div>
 
 
                     <div class="form-group col-md-6">
                         <label  class="col-form-label">Senha*</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="password" required="" maxlength="32" name="senha_usuario" class="form-control" >
                         </div>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label  class="col-form-label">Confirme a senha*</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="password" required="" maxlength="32" class="form-control" >
                         </div>
                     </div>
                 </div>
@@ -102,7 +87,7 @@
             <i class="fa fa-save fa-fw"></i> Salvar
         </button>
     </div> 
-
+</form>
 </div>
 
 <?php include_once ("../../includes/footer_interno.php"); ?>
