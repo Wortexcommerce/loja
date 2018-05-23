@@ -60,14 +60,14 @@ $sql = $db->select("INSERT INTO cad_produtos (  nome_produto,
 												ean_produto='$ean_produto',
 												ncm_produto='$ncm_produto',
 												peso_produto='$peso_produto',
-												comprimento_produto,
+												comprimento_produto='$comprimento_produto',
 												largura_produto='$largura_produto',
 												altura_produto='$altura_produto',
 												url_pagina_produto='$url_pagina_produto',
 												titulo_pagina_produto='$titulo_pagina_produto',
 												descricao_pagina_produto='$descricao_pagina_produto',
 												palavras_chave_produto='$palavras_chave_produto' 
-												WHERE id_produto='$id_produto' ");
+												WHERE id_produto='$id_produto' LIMIT 1");
 }
  
 
