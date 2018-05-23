@@ -24,10 +24,14 @@
 		
 		#VIEWS - CATALOGO**********************************************
 		RewriteRule ^produtos?$ views/catalogo/produtos.php [L,QSA]
+		RewriteRule ^produtos/edit/(.*)?$ views/catalogo/novo_produto.php?id=$1 [L,QSA]
+		
+		
 		RewriteRule ^produtos/novo?$ views/catalogo/novo_produto.php [L,QSA]
 		RewriteRule ^filtros?$ views/catalogo/filtros.php [L,QSA]
 		RewriteRule ^compre-junto?$ views/catalogo/compre-junto.php [L,QSA]
 		RewriteRule ^categorias?$ views/catalogo/categorias.php [L,QSA]
+		
 		
 		#VIEWS - VENDAS************************************************
 		RewriteRule ^pedidos?$ views/vendas/pedidos.php [L,QSA]

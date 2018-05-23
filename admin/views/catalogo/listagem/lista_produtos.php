@@ -20,7 +20,7 @@
 						if(isset($busca)){
 							$sql = $db->select("SELECT ");
 						} else {
-							$sql = $db->select("SELECT nome_produto, sku_produto, preco_normal_produto, preco_promocional_produto, quantidade_produto FROM cad_produtos ORDER BY sku_produto DESC");
+							$sql = $db->select("SELECT id_produto, nome_produto, sku_produto, preco_normal_produto, preco_promocional_produto, quantidade_produto FROM cad_produtos ORDER BY sku_produto DESC");
 						}	
 						
 					
@@ -30,11 +30,24 @@
 									echo '<td><input type="checkbox"></td>';
 									echo '<td style="padding:0">';
 										echo '<div class="img-admin">';
+											echo '<a href="'.ADMIN_WORTEX.'produtos/edit/'.$row['id_produto'].'">';
 											echo '<img src="'.SITE_WORTEX.'uploads/images/produtos/produto.jpg">';
+											echo '</a>';
 										echo '</div>';
 									echo '</td>';
-									echo '<td>'.$row['sku_produto'].'</td>';
-									echo '<td>'.$row['nome_produto'].'</td>';
+									
+									echo '<td>';
+										echo '<a href="'.ADMIN_WORTEX.'produtos/edit/'.$row['id_produto'].'">';
+											echo $row['sku_produto'];
+										echo '</a>';	
+									echo '</td>';
+									
+									echo '<td>';
+										echo '<a href="'.ADMIN_WORTEX.'produtos/edit/'.$row['id_produto'].'">';
+											echo $row['nome_produto'];
+										echo '</a>';	
+									echo '</td>';
+									
 									
 									//PREÇO NORMAL
 									echo '<td>';

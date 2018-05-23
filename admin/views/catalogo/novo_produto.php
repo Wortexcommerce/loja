@@ -1,6 +1,10 @@
 <?php include_once ("../../includes/topo.php"); ?>
 <?php include_once ("../../includes/header_interno.php"); ?>
 
+<?php
+$edicao = new Pesquisas();
+?>
+
 <form method="post" action="produtos/save">
 
 <div class="row">

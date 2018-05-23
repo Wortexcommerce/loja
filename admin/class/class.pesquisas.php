@@ -1,6 +1,30 @@
 <?php
 class Pesquisas{
 	
+	public function EditaCadastros($id,$campo,$tabela,$campo_pesquisa){	
+		$db = new DB();
+		$sql = $db->select("SELECT $campo FROM $tabela WHERE $campo_pesquisa='$id' LIMIT 1");
+		$line = $db->expand($sql);
+		return $line[$campo];
+	}
+	
+	
+	public function SimNaoOptions($resposta){	
+		$db = new DB();
+		$retorno='';
+		//SIM
+		if($resposta==1){
+			$retorno .= '<option value="1" selected="selected">Sim</option>';
+            $retorno .= '<option value="0">Não</option>';
+		//NÃO	
+		} else {
+			$retorno .= '<option value="1">Sim</option>';
+            $retorno .= '<option value="0" selected="selected">Não</option>';
+		}
+		
+		return $retorno;
+	}
+	
 	public function ListagemSubCategorias($id_categoria,$num){	
 		
 		$x=1;
