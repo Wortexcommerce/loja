@@ -80,8 +80,8 @@ $edicao = new Pesquisas();
          <div class="tab-pane" id="aba04">
         	<?php include_once ("telas-cadastro-produtos/tela_novo_produto04.php"); ?>   
         </div>  
-                          
-   	
+        
+        
     </div>
 
 
