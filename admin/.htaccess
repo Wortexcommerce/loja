@@ -60,6 +60,7 @@
 		RewriteRule ^usuarios?$ views/configuracoes/usuarios.php [L,QSA]
 		RewriteRule ^planos?$ views/configuracoes/planos.php [L,QSA]
 		RewriteRule ^novo/usuario?$ views/configuracoes/novo-usuario.php [L,QSA]
+		RewriteRule ^usuarios/edit/(.*)?$ views/configuracoes/novo-usuario.php?id=$1 [L,QSA]
 		
 		#VIEWS - SUPORTE***********************************************
 		RewriteRule ^meus-dados?$ views/suporte/meus-dados.php [L,QSA]
@@ -71,6 +72,7 @@
 		
 		#CONTROLERS - CATALOGO**********************************************
 		RewriteRule ^produtos/save?$ controlers/catalogo/salva_produto.php [L,QSA]
+		RewriteRule ^usuarios/save?$ controlers/configuracoes/salva_usuario.php [L,QSA]
 	
 	
 	

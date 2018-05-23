@@ -12,22 +12,45 @@
                 </tr>
             </thead>
             <tbody >
+
+            	<?php
+						
+						if(isset($busca)){
+							$sql = $db->select("SELECT ");
+						} else {
+							$sql = $db->select("SELECT id_usuario, nome_usuario, sobrenome_usuario, email_usuario, tipo_usuario FROM cad_usuarios ORDER BY id_usuario DESC");
+						}	
             	
-                	<?php
-						$x=1;
-						while($x<16){
+                	
+						
+
+						if($db->rows($sql)){
+						while($row = $db->expand($sql)){
+						
+
+						
+
+									 
 							echo '<tr>';
-								echo '<td>Matheus</td>';
-								echo '<td>Foganholi</td>';
-								echo '<td>matheusfoganholi@bravus.com.br</td>';
-								echo '<td>vendedor</td>';
-								echo '<td> 
-										<a href=""> <span class="fa fa-edit fa-fw"></span></a> 
+								echo '<td>'.$row['nome_usuario'].'</td>';
+								echo '<td>'.$row['sobrenome_usuario'].'</td>';
+								echo '<td>'.$row['email_usuario'].'</td>';
+								echo '<td>';
+										if ($row['tipo_usuario'] == 1) {
+											echo "Administrador";
+										}else{
+											echo "Vendedor";
+										};
+								echo'</td>';
+								echo '<td class="text-right"> 
+										<a href="'.ADMIN_WORTEX.'usuarios/edit/'.$row['id_usuario'].'"> <span class="fa fa-edit fa-fw"></span></a> 
 										<a href=""> <span class="fa fa-trash-o fa-fw"></span></a>
 									</td>';
 							echo '</tr>';
-							$x++;	
+							
 						}
+
+					}
 					?>
                 	
                 </tr>

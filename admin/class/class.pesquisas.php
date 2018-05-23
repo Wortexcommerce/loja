@@ -24,6 +24,22 @@ class Pesquisas{
 		
 		return $retorno;
 	}
+
+	public function UsuarioTipoOptions($resposta){	
+		$db = new DB();
+		$retorno='';
+		//SIM
+		if($resposta==1){
+			$retorno .= '<option value="1" selected="selected">Administrador</option>';
+            $retorno .= '<option value="0">Vendedor</option>';
+		//NÃO	
+		} else {
+			$retorno .= '<option value="1">Administrador</option>';
+            $retorno .= '<option value="0" selected="selected">Vendedor</option>';
+		}
+		
+		return $retorno;
+	}
 	
 	public function ListagemSubCategorias($id_categoria,$num){	
 		
