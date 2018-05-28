@@ -26,7 +26,8 @@
                             <a class="dropdown-item" href="#">Enviado</a>
                             <a class="dropdown-item" href="#">Finalizado</a>
                         </div>
-                    </div><!-- /btn-group --></th>
+                    </div><!-- /btn-group -->
+                    </th>
                 </tr>
             </thead>
             <tbody >
@@ -36,7 +37,7 @@
 						while($x<16){
 							echo '<tr>';
 								echo '<td><input type="checkbox"></td>';
-								echo '<td>1445787'.$x.'</td>';
+								echo '<td><a href="'.ADMIN_WORTEX.'detalhes-pedido">1445787</a></td>';
 								echo '<td>Diogo Mastrangelo de Moura</td>';
 								echo '<td>01/05/2018</td>';
 								echo '<td>03/05/2018</td>';
