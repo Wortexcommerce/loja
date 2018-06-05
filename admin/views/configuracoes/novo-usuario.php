@@ -25,7 +25,7 @@
     
     <div class="col-md-12">
         <div class="card">
-            <h6 class="card-header">Cadstre o novo usuário</h6>
+            <h6 class="card-header">Cadastre o novo usuário</h6>
             <div class="card-body">
 
             <form method="post" action="usuarios/save">

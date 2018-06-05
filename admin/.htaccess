@@ -31,6 +31,7 @@
 		RewriteRule ^filtros?$ views/catalogo/filtros.php [L,QSA]
 		RewriteRule ^compre-junto?$ views/catalogo/compre-junto.php [L,QSA]
 		RewriteRule ^categorias?$ views/catalogo/categorias.php [L,QSA]
+		RewriteRule ^categorias/novo?$ views/catalogo/nova-categoria.php [L,QSA]
 		
 		
 		#VIEWS - VENDAS************************************************
