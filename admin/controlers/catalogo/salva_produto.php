@@ -1,6 +1,8 @@
 <?php
 require("../../config.php");
 
+
+
 if(!isset($id_produto)){
 $sql = $db->select("INSERT INTO cad_produtos (  nome_produto,
 												sku_produto,
@@ -44,6 +46,9 @@ $sql = $db->select("INSERT INTO cad_produtos (  nome_produto,
 												'$descricao_pagina_produto',
 												'$palavras_chave_produto'
 											)");
+											
+		$id_produto = $db->last_id($sql);	
+										
 
 }else{
 
@@ -69,6 +74,40 @@ $sql = $db->select("INSERT INTO cad_produtos (  nome_produto,
 												palavras_chave_produto='$palavras_chave_produto' 
 												WHERE id_produto='$id_produto' LIMIT 1");
 }
+
+
+
+//APAGA AS CATEGORIAS E SUBCATEGORIAS DO PRODUTO
+$sql = $db->select("DELETE FROM cad_relacao_categorias_produtos WHERE id_produto_relacao='$id_produto'"); 
+
+
+//CATEGORIAS DO PRODUTO//
+if(isset($_POST['categoria'])){
+
+	$categoria = $_POST['categoria']; 
+
+	foreach($categoria as $k => $v){ 
+		$id_categoria = $v; 
+		$sql = $db->select("INSERT INTO cad_relacao_categorias_produtos (id_produto_relacao, id_categoria_relacao) VALUES ('$id_produto', '$id_categoria')");
+		
+	} 	
+	
+}
+
+
+//SUBCATEGORIAS DO PRODUTO//
+if(isset($_POST['subcategoria'])){
+
+	$subcategoria = $_POST['subcategoria']; 
+
+	foreach($subcategoria as $k => $v){ 
+		$id_subcategoria = $v; 
+		$sql = $db->select("INSERT INTO cad_relacao_categorias_produtos (id_produto_relacao, id_categoria_relacao) VALUES ('$id_produto', '$id_subcategoria')");
+	} 	
+	
+}
+ 
+ 
  
 
 //SESSIONS DE AVISO//

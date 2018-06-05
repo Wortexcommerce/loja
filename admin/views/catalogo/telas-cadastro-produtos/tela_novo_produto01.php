@@ -6,6 +6,7 @@
     <div class="col-md-7">
     
     	<input type="hidden" name="id_produto" value="<?php if(isset($id)){echo $id;} ?>" />
+        <input type="hidden" name="id_aguarde" value="<?php if(!isset($id)){echo $id = uniqid();} ?>" />
 
     	<div class="form-group">
     		<label  class="col-form-label">Nome</label>
@@ -117,8 +118,12 @@
             <textarea class="form-html" name="descricao_produto"><?php if(isset($id)){echo $edicao->EditaCadastros($id,'descricao_produto','cad_produtos','id_produto');} ?></textarea>
         </div>
     </div>
-
-
+    
+    
+    <div class="col-md-12 mt-20">
+    	<?php include_once ("tela_upload_fotos_produto.php"); ?>   
+ 	</div>
+   
 </div>
 
 

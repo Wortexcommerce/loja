@@ -93,4 +93,5 @@ $edicao = new Pesquisas();
 
 <?php include_once ("../../includes/footer_interno.php"); ?>
 <?php include_once ("../../includes/rodape.php"); ?>
-<?php include_once ("../../includes/editor_texto.php"); ?>
+<?php include_once ("../../includes/galeria_editor_texto.php"); ?>
+<?php include_once ("../../includes/galeria_upload_arquivos.php"); ?>

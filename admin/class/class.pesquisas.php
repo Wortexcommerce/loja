@@ -41,7 +41,7 @@ class Pesquisas{
 		return $retorno;
 	}
 	
-	public function ListagemSubCategorias($id_categoria,$num){	
+	public function ListagemSubCategorias($id_categoria,$num,$produto){	
 		
 		$x=1;
 		$espacos = '';
@@ -55,10 +55,30 @@ class Pesquisas{
 		if($db->rows($sub_principais)){
 			$num++;
 			while($ln_subcategorias = $db->expand($sub_principais)){
+				
 				$id_subcategoria = $ln_subcategorias['id_categoria'];
-				echo '<li class="list-group-item"><input type="checkbox" name="subcategoria[]" value="'.$ln_subcategorias['id_categoria'].'">'.$espacos.'<span class="badge-categorias badge-success"><i class="fa fa-fw fa-long-arrow-right"></i>'.$ln_subcategorias['nome_categoria'].'</span></li>';
+				
+				$verifica_checado = $db->select("SELECT id_relacao FROM cad_relacao_categorias_produtos 
+				WHERE id_produto_relacao='$produto' AND id_categoria_relacao='$id_subcategoria'
+				LIMIT 1");
+				
+				$checked = '';
+				if($db->rows($verifica_checado)){
+					$checked = 'checked="checked"';
+				}
+				
+				
+				echo '<li class="list-group-item">';
+					echo '<input '.$checked.' type="checkbox" name="subcategoria[]" value="'.$ln_subcategorias['id_categoria'].'">';						echo $espacos.'<span class="badge-categorias badge-success">';
+							echo '<i class="fa fa-fw fa-long-arrow-right"></i>';
+							echo $ln_subcategorias['nome_categoria'];
+						echo '</span>';
+				echo '</li>';
+				
+				
 				$objeto = new Pesquisas();
-        		$objeto->ListagemSubCategorias($id_subcategoria,$num);
+        		$objeto->ListagemSubCategorias($id_subcategoria,$num,$produto);
+				
 			}
 		}
 	
@@ -69,15 +89,33 @@ class Pesquisas{
 	public function ListagemCategorias($produto){	
 		
 			$db = new DB();
+			
+			
 			$cat_principais = $db->select("SELECT nome_categoria, id_categoria FROM cad_categoria WHERE status_categoria='1' AND pai_categoria='0' ORDER BY ordem_categoria, nome_categoria");
 			
 			while($ln_categorias = $db->expand($cat_principais)){
-				echo '<li class="list-group-item"><input type="checkbox" name="categoria[]" value="'.$ln_categorias['id_categoria'].'"><b>'.$ln_categorias['nome_categoria'].'</b></li>';
 				
-					$id_categoria = $ln_categorias['id_categoria'];
+				$id_categoria = $ln_categorias['id_categoria'];
+				
+				$verifica_checado = $db->select("SELECT id_relacao FROM cad_relacao_categorias_produtos 
+				WHERE id_produto_relacao='$produto' AND id_categoria_relacao='$id_categoria'
+				LIMIT 1");
+				
+				$checked = '';
+				if($db->rows($verifica_checado)){
+					$checked = 'checked="checked"';
+				}
+				
+				
+				echo '<li class="list-group-item">';
+					echo '<input '.$checked.' type="checkbox" name="categoria[]" value="'.$ln_categorias['id_categoria'].'">';
+					echo '<span class="badge-categorias badge-danger">'.$ln_categorias['nome_categoria'].'</span>';
+				echo '</li>';
+				
+					
 					
 					$objeto = new Pesquisas();
-        			$objeto->ListagemSubCategorias($id_categoria,1);
+        			$objeto->ListagemSubCategorias($id_categoria,1,$produto);
 					
 				
 			}

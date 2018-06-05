@@ -24,6 +24,7 @@ require(dirname(__FILE__)."/../config.php");
         <link href="assets/css/default.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
         <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet">
+        <link href="assets/plugins/upload/css/jquery.dm-uploader.min.css" rel="stylesheet">
         
 		
         <script src="assets/js/modernizr.min.js"></script>

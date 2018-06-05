@@ -4,6 +4,13 @@
 <ul class="list-group">
 <?php
 	$categorias = new Pesquisas();
-	$categorias->ListagemCategorias(0);
+	//EDIÇÃO
+	if(isset($id)){
+		$categorias->ListagemCategorias($id);
+	//INSERT	
+	} else {
+		$categorias->ListagemCategorias(0);
+	}
+	
 ?>
 </ul>

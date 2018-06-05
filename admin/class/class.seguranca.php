@@ -2,9 +2,13 @@
 
 $db = new DB();
 foreach($_POST as $nome_campo => $valor){	
+	
+	if(!is_array($valor)){
 		$valor =$db->escape(addslashes($valor));			
 		$comando = "$" . $nome_campo . '="' . $valor . '";';
 		eval($comando);		
+	}
+	
 }
 
 //Recebe as variaveis do GET - PERMITINDO APENAS NUMEROS
@@ -72,6 +76,27 @@ function envia_email($email,$mensagem){
 				
 }
 
+
+function Nome_Arquivo_Upload($str){
+	
+ 	$extensao = substr($str, -4);
+ 	if($extensao[0] == '.'){
+ 		$extensao = substr($extensao, -3);
+ 	}
+	
+	$str = preg_replace('/[áàãâä]/ui', 'a', $str);
+    $str = preg_replace('/[éèêë]/ui', 'e', $str);
+    $str = preg_replace('/[íìîï]/ui', 'i', $str);
+    $str = preg_replace('/[óòõôö]/ui', 'o', $str);
+    $str = preg_replace('/[úùûü]/ui', 'u', $str);
+    $str = preg_replace('/[ç]/ui', 'c', $str);
+    $str = preg_replace('/[,(),;:|!"#$%&=?~^><ªº-]/', '_', $str);
+    $str = preg_replace('/ /', '_', $str); 
+	$str = ucfirst($str);
+
+	return $str; 
+}
+
 function normaliza($str){	
 	$str = preg_replace('/[áàãâä]/ui', 'a', $str);
     $str = preg_replace('/[éèêë]/ui', 'e', $str);
@@ -81,12 +106,12 @@ function normaliza($str){
     $str = preg_replace('/[ç]/ui', 'c', $str);
     $str = preg_replace('/[,(),;:|!"#$%&=?~^><ªº-]/', '-', $str);
     $str = preg_replace('/[^a-z0-9]/i', '-', $str);
-    $str = preg_replace('/_+/', '-', $str); // ideia do Bacco :)
+    $str = preg_replace('/_+/', '-', $str); 
 	$str = strtolower($str);
 		
 	$string = $str.'.html';		
 
-	return $string; //finaliza, gerando uma saída para a funcao
+	return $string; 
 }
 	
 	

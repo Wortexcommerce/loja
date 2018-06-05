@@ -9,6 +9,9 @@ class Login{
 		if(basename($_SERVER['PHP_SELF'])!='index.php'){
 			if(!isset($_SESSION['user_admin_wortex'])){
 				header("Location: ".ADMIN_WORTEX."");
+			} else {
+				//Cria Session do usuário
+				define("ID_USER_WORTEX", $_SESSION['user_admin_wortex']);	
 			}
 		}
 	}
@@ -22,7 +25,10 @@ class Login{
 			
 		} else {
 			
-			include_once("views/login/login.php");	
+			include_once("views/login/login.php");
+			//Cria Session do usuário
+			define("ID_USER_WORTEX", $_SESSION['user_admin_wortex']);	
+			
 		}
 	}
 	
