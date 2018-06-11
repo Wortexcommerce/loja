@@ -30,7 +30,7 @@ function reload_foto_produtos(){
  	$("#fotos-produto-reload").html('Carregando miniaturas, aguarde...');
  	$("#fotos-produto-reload").load('views/catalogo/listagem/lista_fotos_produto.php?reload=1&id=<?php echo $id;  ?>', function(){
 		
-		$("#files").html('');
+		//$("#files").html('');
 			
 	});
 	  
@@ -47,6 +47,7 @@ $(function(){
     url: 'controlers/catalogo/upload_fotos_produtos.php',
 	extraData: {"id_produto": '<?php echo $id;  ?>'},
     maxFileSize: 3000000, // 3 Megs 
+	extFilter: ["jpg", "jpeg", "png", "gif"],
     onDragEnter: function(){
       // Happens when dragging something over the DnD area
       this.addClass('active');
@@ -96,6 +97,7 @@ $(function(){
       ui_multi_update_file_progress(id, 100, 'success', false);
     },
     onUploadError: function(id, xhr, status, message){
+		alert(message)
       ui_multi_update_file_status(id, 'danger', message);
       ui_multi_update_file_progress(id, 0, 'danger', false);  
     },

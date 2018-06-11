@@ -12,10 +12,14 @@ if($_SERVER['HTTP_HOST']=='localhost' || $_SERVER['HTTP_HOST']=='127.0.0.1'){
 	$caminho_site = 'http://'.$_SERVER['HTTP_HOST'];	
 }
 
-
+//VARIAVEIS DE CAMINHO DO SITE E ADMIN//
 define("ADMIN_WORTEX", $caminho_admin);
 define("SITE_WORTEX", $caminho_site);
 define('ROOT_DIR', dirname(__FILE__).'/' );
+
+//VARIAVEIS DE CAMINHO DO SITE E ADMIN//
+define("PASTA_UPLOAD_IMAGENS_GRANDE", 'uploads/images/produtos/medium/');
+define("PASTA_UPLOAD_IMAGENS_THUMBS", 'uploads/images/produtos/thumbs/');
 
 
 require(ROOT_DIR."../class/class.db.php");

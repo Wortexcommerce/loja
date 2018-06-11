@@ -1,9 +1,10 @@
 <?php
 require("../../config.php");
 
+//SALVA
+if(empty($id_produto)){
 
 
-if(!isset($id_produto)){
 $sql = $db->select("INSERT INTO cad_produtos (  nome_produto,
 												sku_produto,
 												resumo_produto,
@@ -50,6 +51,7 @@ $sql = $db->select("INSERT INTO cad_produtos (  nome_produto,
 		$id_produto = $db->last_id($sql);	
 										
 
+//UPDATE
 }else{
 
 	$sql = $db->select("UPDATE cad_produtos SET nome_produto='$nome_produto',
@@ -75,6 +77,21 @@ $sql = $db->select("INSERT INTO cad_produtos (  nome_produto,
 												WHERE id_produto='$id_produto' LIMIT 1");
 }
 
+
+
+//FOTOS DO PRODUTO
+$sql = $db->select("UPDATE cad_fotos_produtos SET aguarde_foto='0', produto_foto='$id_produto' WHERE usuario_foto='".ID_USER_WORTEX."' AND aguarde_foto='1'"); 
+
+
+//FOTO PRINCIPAL
+if(isset($foto_principal)){
+	//VEM MARCADO RADIO FOTO PRINCIPAL
+	$sql = $db->select("UPDATE cad_fotos_produtos SET principal_foto='0' WHERE id_foto!='$foto_principal'");		
+	$sql = $db->select("UPDATE cad_fotos_produtos SET principal_foto='1' WHERE id_foto='$foto_principal' LIMIT 1");		
+} else {
+	//NÃO VEM MARCADO, OU ADICIONOU APENAS UMA FOTO
+	$sql = $db->select("UPDATE cad_fotos_produtos SET principal_foto='1' WHERE produto_foto='$id_produto' ORDER BY id_foto LIMIT 1");		
+}
 
 
 //APAGA AS CATEGORIAS E SUBCATEGORIAS DO PRODUTO

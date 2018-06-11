@@ -14,24 +14,28 @@ try {
         case UPLOAD_ERR_OK:
             break;
         case UPLOAD_ERR_NO_FILE:
-            throw new RuntimeException('No file sent.');
+            throw new RuntimeException('Nenhum arquivo enviado.');
         case UPLOAD_ERR_INI_SIZE:
         case UPLOAD_ERR_FORM_SIZE:
-            throw new RuntimeException('Exceeded filesize limit.');
+            throw new RuntimeException('O tamanho do arquivo excede o limite de envio.');
         default:
             throw new RuntimeException('Unknown errors.');
     }
-
-    //$filepath = sprintf('../../../uploads/images/produtos/%s_%s', uniqid(), $_FILES['file']['name']);
+	
+	
 	
 	$imagem_name = Nome_Arquivo_Upload(uniqid().'_'.$_FILES['file']['name']);
-	$filepath = '../../../uploads/images/produtos/'.$imagem_name;
+	$filepath = '../../../'.PASTA_UPLOAD_IMAGENS_GRANDE.$imagem_name;
 
     if (!move_uploaded_file($_FILES['file']['tmp_name'],$filepath)) {
         throw new RuntimeException('Falha ao fazer upload do arquivo.');
     } else {
 		
-		$sql = $db->select("INSERT INTO cad_fotos_produtos (produto_foto, imagem_foto, usuario_foto) VALUES ('$id_produto', '$imagem_name', '".ID_USER_WORTEX."')");
+		if(is_numeric($id_produto)){$aguarde=0;} else {$aguarde=1;}
+		
+		$sql = $db->select("INSERT INTO cad_fotos_produtos (produto_foto, imagem_foto, usuario_foto, aguarde_foto) VALUES ('$id_produto', '$imagem_name', '".ID_USER_WORTEX."', '$aguarde')");
+		
+		
 
 	}
 		
