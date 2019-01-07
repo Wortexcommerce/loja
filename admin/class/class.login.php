@@ -27,7 +27,7 @@ class Login{
 			
 			include_once("views/login/login.php");
 			//Cria Session do usuário
-			define("ID_USER_WORTEX", $_SESSION['user_admin_wortex']);	
+			//define("ID_USER_WORTEX", $_SESSION['user_admin_wortex']);	
 			
 		}
 	}

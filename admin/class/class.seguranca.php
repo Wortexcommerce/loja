@@ -4,10 +4,12 @@ $db = new DB();
 foreach($_POST as $nome_campo => $valor){	
 	
 	if(!is_array($valor)){
+	
 		$valor =$db->escape(addslashes($valor));			
 		$comando = "$" . $nome_campo . '="' . $valor . '";';
 		eval($comando);		
-	}
+	
+	} 
 	
 }
 

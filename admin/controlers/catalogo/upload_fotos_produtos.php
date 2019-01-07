@@ -3,33 +3,25 @@ require("../../config.php");
 header('Content-type:application/json;charset=utf-8');
 
 try {
-    if (
-        !isset($_FILES['file']['error']) ||
-        is_array($_FILES['file']['error'])
-    ) {
-        throw new RuntimeException('Invalid parameters.');
-    }
-
-    switch ($_FILES['file']['error']) {
-        case UPLOAD_ERR_OK:
-            break;
-        case UPLOAD_ERR_NO_FILE:
-            throw new RuntimeException('Nenhum arquivo enviado.');
-        case UPLOAD_ERR_INI_SIZE:
-        case UPLOAD_ERR_FORM_SIZE:
-            throw new RuntimeException('O tamanho do arquivo excede o limite de envio.');
-        default:
-            throw new RuntimeException('Unknown errors.');
-    }
-	
+    
 	
 	
 	$imagem_name = Nome_Arquivo_Upload(uniqid().'_'.$_FILES['file']['name']);
 	$filepath = '../../../'.PASTA_UPLOAD_IMAGENS_GRANDE.$imagem_name;
-
+	
+	
     if (!move_uploaded_file($_FILES['file']['tmp_name'],$filepath)) {
         throw new RuntimeException('Falha ao fazer upload do arquivo.');
     } else {
+		
+		//REDIMENSIONA IMAGENS
+		$redimensiona_imagens = new ImagensRedimensiona();
+		
+		//MINIATURA
+		$redimensiona_imagens_miniatura = $redimensiona_imagens->RedimensionaFotoProduto($imagem_name,192,'thumb');
+		
+		//NORMAL
+		$redimensiona_imagens_normal = $redimensiona_imagens->RedimensionaFotoProduto($imagem_name,1000,'grande');
 		
 		if(is_numeric($id_produto)){$aguarde=0;} else {$aguarde=1;}
 		

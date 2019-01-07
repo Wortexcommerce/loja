@@ -9,6 +9,7 @@
         <script src="assets/js/sortable.js"></script>
 		<script src="assets/plugins/switchery/switchery.min.js"></script>
         <script src="assets/js/jquery.youtubebackground.js"></script>
+        <script src="assets/plugins/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
         
         <!-- Mascara -->
         <script src="assets/js/mascara.js"></script>
@@ -44,11 +45,11 @@
         
         
         <script>
-			$('#video').YTPlayer({
-				fitToBackground: true,
+			//$('#video').YTPlayer({
+				//fitToBackground: true,
 				//videoId: 'R2zFX3ZON_c'
-				videoId: 'R2zFX3ZON_c'
-			});
+				//videoId: 'R2zFX3ZON_c'
+			//});
 		</script>
 
         

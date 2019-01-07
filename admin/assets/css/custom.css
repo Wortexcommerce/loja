@@ -8,6 +8,8 @@
 
 .avisos-loja{border-radius:0; background-color:#ACE1C1; color:#3C763D; padding:15px 0 15px 0; font-size:16px; margin-bottom:0px}
 
+.avisos-pesquisa{background-color:#D9EDF7; color:#31708F; font-size:16px; margin-bottom:10px; border-color:#BCE8F1}
+
 .table > tbody > tr > td {color:#333}
 .table > tbody > tr > td a{color:#333}
 .table > tbody > tr > td a:hover{text-decoration:underline}
@@ -16,6 +18,10 @@
   padding: .35em .5em;
   border-radius:6px;
 }
+
+
+.itens-lista-checkbox {padding:5px 15px 5px 15px }
+.espacador-lista-checkbox{border-top: 1px solid #EBEBEB;color:#EBEBEB;background-color:#EBEBEB;height: 1px;}
 
 .tab-pane h5 i{margin-right:4px}
 
@@ -37,7 +43,7 @@
 }
 
 
-#files{overflow:auto}
+
 .icon-danger{color:#F36270}
 .miniatura-upload{border:1px solid #f5f5f5; padding:12px; width:24%; margin-right:1%; margin-bottom:10px}
 .miniatura-upload-foto{background-color:#f5f5f5; margin-bottom:10px; min-height:100px;}

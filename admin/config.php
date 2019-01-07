@@ -22,6 +22,7 @@ define("PASTA_UPLOAD_IMAGENS_GRANDE", 'uploads/images/produtos/medium/');
 define("PASTA_UPLOAD_IMAGENS_THUMBS", 'uploads/images/produtos/thumbs/');
 
 
+//CLASSES DE USO
 require(ROOT_DIR."../class/class.db.php");
 require(ROOT_DIR."class/class.seguranca.php");
 require(ROOT_DIR."class/class.login.php");
@@ -30,6 +31,8 @@ require(ROOT_DIR."class/class.dados_loja.php");
 require(ROOT_DIR."class/class.avisos_loja.php");
 require(ROOT_DIR."class/class.menu.php");
 require(ROOT_DIR."class/class.pesquisas.php");
+require(ROOT_DIR."class/class.imagens.php");
+
 
 
 //VERIFICA SE ESTÁ LOGADO//

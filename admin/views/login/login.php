@@ -63,7 +63,7 @@
 
                                         <div class="row m-t-20">
                                             <div class="col-sm-12 text-center">
-                                                <p class="text-muted"><b>Wortex Commerce</b> &copy; Copyright <?php echo date("Y"); ?></p>
+                                                <p class="text-muted">&copy; <b>Wortex Commerce</b> <?php echo date("Y"); ?></p>
                                             </div>
                                         </div>
 
